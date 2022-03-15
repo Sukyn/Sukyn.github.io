@@ -1,0 +1,256 @@
+@font-face {
+    font-family: 'Oxanium';
+    src: url('fonts/Oxanium-Light.ttf');
+}
+
+@font-face {
+font-family: 'Raleway';
+src: url('fonts/Raleway-SemiBold.ttf'); /* IE9 Compat Modes */
+ }
+.sublist, .year
+{
+  font-family: 'Raleway', Arial;
+
+}
+
+.subsublist, p
+{
+  font-family: Arial;
+}
+
+
+.menu
+{
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  align-items: flex-end;
+  width: 90%;
+
+}
+
+h1
+{
+  text-align: center;
+  font-family: 'Oxanium', Arial;
+  font-size: 3em;
+  background: url("Images/orange_cloud.jpg");
+  color: lightgrey;
+
+  border-radius: 10px;
+  box-shadow: 1px 1px 4px black;
+  text-shadow: 2px 2px 4px black;
+  width: 95%;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  left: 2.5%;
+}
+
+#pres
+{
+  font-family: 'Oxanium', Arial;
+}
+
+#avatar
+{
+  text-align: center;
+
+}
+
+h2
+{
+  font-family: 'Oxanium', Arial, Times;
+  text-align: center;
+  font-size: 2em;
+  background-color: lightgrey;
+  border-radius: 10px;
+  box-shadow: 0.5px 0.5px 4px grey;
+  width: 90%;
+  margin: auto;
+}
+
+#mail, #phone
+{
+  color: lightgrey;
+}
+a:hover
+{
+  text-shadow: 0px 0px 0.1px black;
+  color: purple;
+}
+
+a:visited
+{
+  color: #606060;
+}
+
+
+
+
+.list
+{
+  font-size: 1.2em;
+}
+
+ul .sublist
+{
+  font-size: 0.9em;
+  list-style-type: "➣ ";
+}
+
+.subsublist, .subsubsublist
+{
+  color: #585858;
+  font-size: 0.8em;
+  list-style-type: "→ ";
+  padding-bottom: 1em;
+  padding-top: 0.5em;
+  display:block;
+}
+
+.subsubsublist:hover /* Le texte pourrait être trop petit pour certains */
+{
+  font-size: 1em;
+}
+
+#act2020, #act2019, #act2016{display:none}
+
+.my-div{display:block}
+
+#act2016:checked ~ label,
+#act2019:checked ~ label,
+#act2020:checked ~ label
+{font-size:0.4em;}
+
+
+/* COMPETENCES */
+#conteneur
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.matter
+{
+  width: 550px;
+  margin-left: 0;
+  margin-right: 0;
+  font-family: 'Raleway', Arial;
+}
+
+#container
+{
+  border: 2px black solid;
+}
+
+.hobby
+{
+  width: 550px;
+  margin-left: 0;
+  margin-right: 0;
+}
+.matter h3, p, .hobby h3
+{
+  text-align: center;
+}
+/* FIN COMPETENCES */
+
+/* EXPERIENCES */
+#conteneur2
+{
+  display: flex;
+  flex-direction: column-reverse;
+  margin-left: 10%;
+  margin-top: 2%;
+  justify-content: center;
+}
+.year/* Une année */
+{
+  color: rgba(0, 155, 0, 1);
+  font-size: 1.5em;
+
+}
+/* EXPERIENCES */
+
+.rules /* Règles de projet */
+{
+  color: red;
+}
+
+.enterprize /* Nom d'une entreprise */
+{
+  color: orange;
+}
+
+
+
+.date /* Une date concrète */
+{
+  color: darkgreen;
+}
+
+.proglang /* Un Langage de programmation */
+{
+  color: #e75480;
+}
+
+
+
+
+body
+{
+  background: url("Images/skyR.png") repeat;
+  min-height: 100vh;
+}
+
+
+
+#page {
+	min-height:98vh; /* 1 */
+	display:flex; /* 2 */
+	flex-direction:column; /* 3 */
+}
+
+#content {
+	flex-grow:1; /* 4 */
+}
+
+.contacts
+{
+  font-family: 'Oxanium', Arial;
+  background: url("Images/orange_cloud.jpg");
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  align-items: flex-end;
+  width: 95%;
+  color: lightgrey;
+  border-radius: 10px;
+  box-shadow: 1px 1px 4px black;
+  text-shadow: 2px 2px 4px black;
+  margin: auto;
+  flex-wrap: wrap;
+}
+.contacts li
+{
+  padding: 4px;
+}
+
+@media screen and (max-width: 800px)
+{
+  #avatar
+  {
+    display: none;
+  }
+  h1
+  {
+    display: none;
+  }
+  .menu
+  {
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <!-- En-tête de la page -->
+        <meta charset="utf-8" />
+
+        <title>Page personnelle</title>
+        <style>
+        @font-face {
+            font-family: 'Oxanium';
+            src: url('fonts/Oxanium-Light.ttf');
+        }
+
+        @font-face {
+        font-family: 'Raleway';
+        src: url('fonts/Raleway-SemiBold.ttf'); /* IE9 Compat Modes */
+         }
+        .sublist, .year
+        {
+          font-family: 'Raleway', Arial;
+
+        }
+
+        .subsublist, p
+        {
+          font-family: Arial;
+        }
+
+
+        .menu
+        {
+          margin-top: 80px;
+          display: flex;
+          justify-content: space-around;
+          list-style-type: none;
+          align-items: flex-end;
+          width: 90%;
+
+        }
+
+        h1
+        {
+          text-align: center;
+          font-family: 'Oxanium', Arial;
+          font-size: 3em;
+          background: url("Images/orange_cloud.jpg");
+          color: lightgrey;
+
+          border-radius: 10px;
+          box-shadow: 1px 1px 4px black;
+          text-shadow: 2px 2px 4px black;
+          width: 95%;
+          margin: auto;
+          position: fixed;
+          top: 0;
+          left: 2.5%;
+        }
+
+        #pres
+        {
+          font-family: 'Oxanium', Arial;
+        }
+
+        #avatar
+        {
+          text-align: center;
+
+        }
+
+        h2
+        {
+          font-family: 'Oxanium', Arial, Times;
+          text-align: center;
+          font-size: 2em;
+          background-color: lightgrey;
+          border-radius: 10px;
+          box-shadow: 0.5px 0.5px 4px grey;
+          width: 90%;
+          margin: auto;
+        }
+
+        #mail, #phone
+        {
+          color: lightgrey;
+        }
+        a:hover
+        {
+          text-shadow: 0px 0px 0.1px black;
+          color: purple;
+        }
+
+        a:visited
+        {
+          color: #606060;
+        }
+
+
+
+
+        .list
+        {
+          font-size: 1.2em;
+        }
+
+        ul .sublist
+        {
+          font-size: 0.9em;
+          list-style-type: "➣ ";
+        }
+
+        .subsublist, .subsubsublist
+        {
+          color: #585858;
+          font-size: 0.8em;
+          list-style-type: "→ ";
+          padding-bottom: 1em;
+          padding-top: 0.5em;
+          display:block;
+        }
+
+        .subsubsublist:hover /* Le texte pourrait être trop petit pour certains */
+        {
+          font-size: 1em;
+        }
+
+        #act2020, #act2019, #act2016{display:none}
+
+        .my-div{display:block}
+
+        #act2016:checked ~ label,
+        #act2019:checked ~ label,
+        #act2020:checked ~ label
+        {font-size:0.4em;}
+
+
+        /* COMPETENCES */
+        #conteneur
+        {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+        }
+
+        .matter
+        {
+          width: 550px;
+          margin-left: 0;
+          margin-right: 0;
+          font-family: 'Raleway', Arial;
+        }
+
+        #container
+        {
+          border: 2px black solid;
+        }
+
+        .hobby
+        {
+          width: 550px;
+          margin-left: 0;
+          margin-right: 0;
+        }
+        .matter h3, p, .hobby h3
+        {
+          text-align: center;
+        }
+        /* FIN COMPETENCES */
+
+        /* EXPERIENCES */
+        #conteneur2
+        {
+          display: flex;
+          flex-direction: column-reverse;
+          margin-left: 10%;
+          margin-top: 2%;
+          justify-content: center;
+        }
+        .year/* Une année */
+        {
+          color: rgba(0, 155, 0, 1);
+          font-size: 1.5em;
+
+        }
+        /* EXPERIENCES */
+
+        .rules /* Règles de projet */
+        {
+          color: red;
+        }
+
+        .enterprize /* Nom d'une entreprise */
+        {
+          color: orange;
+        }
+
+
+
+        .date /* Une date concrète */
+        {
+          color: darkgreen;
+        }
+
+        .proglang /* Un Langage de programmation */
+        {
+          color: #e75480;
+        }
+
+
+
+
+        body
+        {
+          background: url("Images/skyR.png") repeat;
+          min-height: 100vh;
+        }
+
+
+
+        #page {
+        	min-height:98vh; /* 1 */
+        	display:flex; /* 2 */
+        	flex-direction:column; /* 3 */
+        }
+
+        #content {
+        	flex-grow:1; /* 4 */
+        }
+
+        .contacts
+        {
+          font-family: 'Oxanium', Arial;
+          background: url("Images/orange_cloud.jpg");
+          display: flex;
+          justify-content: space-around;
+          list-style-type: none;
+          align-items: flex-end;
+          width: 95%;
+          color: lightgrey;
+          border-radius: 10px;
+          box-shadow: 1px 1px 4px black;
+          text-shadow: 2px 2px 4px black;
+          margin: auto;
+          flex-wrap: wrap;
+        }
+        .contacts li
+        {
+          padding: 4px;
+        }
+
+        @media screen and (max-width: 800px)
+        {
+          #avatar
+          {
+            display: none;
+          }
+          h1
+          {
+            display: none;
+          }
+          .menu
+          {
+            margin-top: 10px;
+          }
+        }
+        </style>
+    </head>
+    <body>
+        <!-- Corps de la page -->
+        <div id="page">
+        <header>
+        <h1>Colin Blake</h1>
+
+
+        </header>
+
+        <div id="content">
+          <br/>
+          <br/>
+          <br/>
+
+        <div id="conteneur">
+          <div class="matter">
+          <h3 id="pres">Bienvenue sur ma page de présentation</h3>
+          <p>
+            Je m'appelle Colin, j'ai actuellement 19 ans et je suis en 2ème année de Licence Double Diplôme <em>Mathématiques</em> & <em>Informatique</em> à l'université Paris-Saclay<br />
+              <br/>
+            Bon voyage !
+          </p>
+          </div>
+        </div>
+      </div>
+
+        <div id="content">
+
+
+
+          <h2>Ma formation</h2>
+          <div id="conteneur2">
+
+              <div><h3 class="year">2012 - 2016</h3>
+                <ul>
+                  <li>Brevet des collèges (Mention Très Bien) au Collège Jules Verne, Villebon</li>
+                </ul>
+              </div>
+              <div><h3 class="year">2016 - 2019</h3>
+                <ul>
+                  <li>Baccalauréat Scientifique (Mention Très Bien) au Lycée Blaise Pascal, Orsay</li>
+                </ul>
+              </div>
+              <div><h3 class="year">2019 - Aujourd'hui</h3>
+                <ul>
+                  <li>Licence Double Diplôme <em>Mathématiques</em> et <em>Informatique</em> à l'Université Paris-Saclay (Délégué de promotion)</li>
+                </ul>
+              </div>
+
+          </div>
+        </div>
+
+
+        <div id="content">
+          <br/>
+          <br/>
+          <h2>Mon expérience</h2>
+            <div id="conteneur2">
+
+              <input type="checkbox" id="act2016">
+              <label for="act2016">
+              <div class="my-div">
+              <strong class="year">2016</strong>
+              <ul class="sublist">
+                <li>Stage dans l'entreprise <a class="enterprize" href="https://www.decideom.fr/" target="_blank" title="Site de DecideOm">DecideOm</a> spécialisée dans l'analyse de données</li>
+              </ul>
+              </div>
+              </label>
+
+              <input type="checkbox" id="act2019">
+              <label for="act2019">
+              <div class="my-div">
+              <strong class="year">2019</strong>
+              <ul class="sublist">
+                <li>Réalisation du jeu <a href="https://github.com/Sukyn/Squadro" title="Voir mon projet sur GitHub">Squadro</a> en <span class="proglang">C++</span><a class="rules" href="https://dirdam.github.io/squadro.html" title="Règles du jeu">[Règles]</a>
+                  <ul class ="subsublist">
+                    <li>VisualStudio</li>
+                    <li>Bibliothèque SFML</li>
+                  </ul>
+                </li>
+                <li>Réalisation d'un projet sur la <a href="https://drive.google.com/drive/folders/1RCZpcxfnlTY3Kg-OucxCPwCreo5A1Ysp?usp=sharing" title="Voir le projet">classification de données</a> en <span class="proglang">Python</span>
+                  <ul class ="subsublist">
+                    <li>Google Collaborate</li>
+                    <li>Bibliothèque Sklearn</li>
+                    <li>Bibliothèque Pandas</li>
+                    <li>Bibliothèque Numpy</li>
+                    <li>Bibliothèque MatPlotLib</li>
+                  </ul>
+                 </li>
+              </ul>
+              </div>
+              </label>
+
+              <input type="checkbox" id="act2020">
+              <label for="act2020">
+              <div class="my-div">
+              <strong class="year">2020</strong>
+              <ul class="sublist">
+                <li>Réalisation du jeu CodeNames en <span class="proglang">Python</span>  <a class="rules" href="https://czechgames.com/files/rules/codenames-rules-en.pdf" title="Règles du jeu">[Règles]</a>
+                  <ul class ="subsublist">
+                    <li>Bibliothèque Pillow</li>
+                    <li>Tirage de plateau aléatoire</li>
+                  </ul>
+                  </li>
+                <li>Réalisation d'un robot Discord pour faciliter l'échange d'information entre élèves durant le confinement en <span class="proglang">Python</span>
+                  <ul class="subsublist">
+                    <li>Programmation asynchrone (Asyncio)</li>
+                    <li>Utilisation de l'API Discord (Gestion d'événements)</li>
+                    <li>Partage de mails (Webhook)</li>
+                    <li>Organization des cours à distance (Gestion de Planning)</li>
+                    <li>Travail sur l'accessibilité d'un projet pour que chacun puisse s'en servir facilement (Point de vue utilisateur)</li>
+                    <li>Répartition automatique des membres selon leur statut, professeur et élève</li>
+                    <li>Gestion de permissions administrateurs pour certaines commandes</li>
+                    <li>Données sauvegardées (Pickle)</li>
+                    <li><span class="proglang">Python</span> orienté objet</li>
+                    <li>Encapsulation des objets</li>
+                    <li>Programmation modulaire</li>
+                    <li>PM2</li>
+                    <li>Stockage des informations publiques plus facilement manipulable (JSon)</li>
+                  </ul>
+                </li>
+                <li>Projet d'étude des propriétés des Labyrinthes en <span class="proglang">Python</span>
+                  <ul class="subsublist">
+                    <li>SageMath</li>
+                    <li>Bibliothèque MatPlotLib</li>
+                    <li><a href="Travaux/RapportProjet.pdf" title="PDF du Rapport">Rapport de mi projet</a></li>
+                    <li><a href="Travaux/ProjetLaby.zip" title="Notebook du projet">Rapport final</a></li>
+                  </ul>
+                <li>Participation à la réalisation d'un projet de modélisation de termites en <span class="proglang">C++</span>
+                  <ul class="subsublist">
+                    <li>Utilisation de GitHub</li>
+                    <li>Encapsulation en <span class="proglang">C++</span></li>
+                  </ul>
+                </li>
+                <li>Réalisation de <a href="https://github.com/Sukyn/MyFirstWebsite" title="Voir sur GitHub">ce site</a>
+                  <ul class="subsublist">
+                    <li><span class="proglang">HTML5</span></li>
+                    <li><span class="proglang">CSS3</span></li>
+                    <li>Flex Box CSS</li>
+                    <li>Media Queries</li>
+                  </ul>
+                </li>
+                <li>Création d'une <a href="https://github.com/Sukyn/Web_Presentation-Page" title="Voir sur GitHub">page de présentation</a> pour le cours "Future of Work" de l'alliance EUGLOH
+                  <ul class="subsublist">
+                    <li><span class="proglang">HTML5</span></li>
+                    <li><span class="proglang">CSS3</span></li>
+                    <li>Développement Multilingue</li>
+                  </ul>
+                </li>
+                <li>Élaboration d'un système de <a href="https://github.com/Sukyn/Tool_Japanese" title="Voir sur GitHub">flashcards</a> pour travailler la mémoire en <span class="proglang">Python</span>
+                  <ul class="subsublist">
+                    <li>Respect de la PEP-8</li>
+                    <li>Classes et méthodes en <span class="proglang">Python</span></li>
+                    <li>Gestion de l'aléatoire, de la progression</li>
+                    <li>Utilisation de méthodes issues des neurosciences</li>
+                  </ul>
+                </li>
+                <li>Création d'un <a href="https://github.com/Sukyn/Network_Mini-Server" title="Voir sur GitHub">mini-réseau</a> en <span class="proglang">C</span>
+                  <ul class="subsublist">
+                    <li>Elaboration de Sockets</li>
+                    <li>Routage</li>
+                    <li>Communication par le réseau WiFi</li>
+                  </ul>
+                </li>
+                <li>Réalisation d'un projet de <a href="https://github.com/Sukyn/Project_Quadtrees" title="Voir sur GitHub">Quadtrees</a> en <span class="proglang">C</span>
+                  <ul class="subsublist">
+                    <li>Optimisation d'algorithmes</li>
+                    <li>Gestion de mémoire/pointeurs</li>
+                    <li>Clarté de code</li>
+                    <li>Récursivité</li>
+                  </ul>
+                </li>
+
+            </ul>
+            </div>
+            </label>
+
+          </div>
+
+          <div id="content">
+            <br/>
+            <br/>
+            <br/>
+            <h2>Mes compétences</h2>
+              <div id="conteneur">
+              <div class="matter">
+                <!-- Début Mathématiques -->
+                <h3>Mathématiques</h3>
+                  <ul class="sublist">
+                    <li>Cours à la faculté
+                      <ul class="subsublist">
+                        <li>Calculus, Math101</li>
+                        <li>Algèbre linéaire, Math103</li>
+                        <li>Analyse, Math104</li>
+                        <li>Logique et démonstrations assistées par ordinateur, Math114 (Lean)</li>
+                        <li>Analyse et Convergence, MDD201</li>
+                        <li>Structures Algébriques, MDD202</li>
+                        <li>Probabilités et Statistiques, MDD203</li>
+                      </ul>
+                    </li>
+                    <li>Kangourou des Mathématiques
+                      <ol class="subsublist">
+                        <li><strong>2013 :</strong> Classé 67ème sur 81575 (Classe de 6e)</li>
+                        <li><strong>2014 :</strong> Classé 774ème sur 54019 (Classe de 5e)</li>
+                        <li><strong>2015 :</strong> Classé 624ème sur 23811 (Classe de 4e)</li>
+                      </ol>
+                    </li>
+                  </ul>
+                </div>
+                <!-- Début Informatique -->
+                <div class="matter">
+                <h3>Informatique</h3>
+
+                  <ul class="sublist">
+                    <li>Cours à la faculté
+                      <ul class="subsublist">
+                        <li><strong>C++</strong>
+                          <ul class="subsubsublist">
+                            <li>Introduction à l'information, Info111</li>
+                            <li>Programmation Impérative, Info121</li>
+                            <li>Programmation Impérative Avancée, Info121a (Conditions de confinement)</li>
+                          </ul>
+                        </li>
+                        <li><strong>C</strong>
+                          <ul class="subsubsublist">
+                            <li>Réseaux</li>
+                            <li>Algorithmique Avancée</li>
+                          </ul>
+                        </li>
+                        <li><strong>Python</strong>
+                          <ul class="subsubsublist">
+                            <li>Introduction à la science des données, Info114</li>
+                          </ul>
+                        </li>
+                        <li><strong>OCaml</strong>
+                          <ul class="subsubsublist">
+                            <li>Programmation Fonctionnelle Avancée</li>
+                          </ul>
+                        </li>
+                        <li><strong>Autres</strong>
+                          <ul class="subsubsublist">
+                            <li>Graphes et Outils Logiques, Info229</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>Cours en ligne
+                      <ul class="subsublist">
+                        <li><span class="date">Bientôt lancé</span> : <a title="Lien du cours" href="https://www.fun-mooc.fr" target="_blank">Introduction au traitement des images</a></li>
+                        <li><span class="date">Bientôt lancé</span> : <a title="Lien du cours" href="https://www.fun-mooc.fr" target="_blank">Principes des réseaux de données</a></li>
+                        <li><span class="date">Bientôt lancé</span> : <a title="Lien du cours" href="https://www.fun-mooc.fr" target="_blank">S'initier à la fabrication numérique</a></li>
+                        <li><span class="date">En cours</span> : <a title="Lien du cours" href="https://www.fun-mooc.fr/courses/course-v1:ParisSaclay+71007+session15/info" target="_blank">Introduction à la statistique avec R </a></li>
+                        <li><span class="date">26/06/2020</span> : <a title="Lien du cours" href="https://openclassrooms.com/fr/courses/4452741-decouvrez-les-librairies-python-pour-la-data-science/5574866-manipulez-les-donnees-contenues-dans-vos-dataframes" target="_blank">Découvrez les librairies Python pour la Data Science </a></li>
+                        <li><span class="date">20/06/2020</span> : <a title="Lien du cours" href="https://openclassrooms.com/fr/courses/4449026-initiez-vous-a-lalgebre-relationnelle-avec-le-langage-sql" target="_blank">Initiez-vous à l'algèbre relationnelle avec le langage SQL</a></li>
+                        <li><span class="date">15/06/2020</span> : <a title="Lien du cours" href="https://openclassrooms.com/fr/courses/4425111-perfectionnez-vous-en-python" target="_blank">Perfectionnez-vous en Python </a></li>
+                        <li><span class="date">10/06/2020</span> : <a title="Lien du cours" href="https://openclassrooms.com/fr/courses/4302126-decouvrez-la-programmation-orientee-objet-avec-python/4303986-creez-votre-premier-agent" target="_blank"> Découvrez la programmation orientée objet avec Python </a></li>
+                        <li><span class="date">07/06/2020</span> : <a title="Lien du cours" href="https://openclassrooms.com/fr/courses/6417031-objectif-ia-initiez-vous-a-lintelligence-artificielle" target="_blank">Objectif IA : initiez-vous à l'intelligence artificielle</a></li>
+                        <li><span class="date">06/06/2020</span> : <a title="Lien du cours" href="https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python" target="_blank">Apprenez à programmer en Python</a></li>
+                        <li><span class="date">28/05/2020</span> : <a href="https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3" target="_blank">Apprenez à programmer votre site web avec HTML5 et CSS3</a></li>
+                        <li><span class="date">27/05/2020</span> : <a href="https://university.mongodb.com/courses/M001/about" target="_blank">MongoDB Basics</a></li>
+                        <li><span class="date">23/05/2020</span> : <a title="Lien du cours" href="https://openclassrooms.com/fr/courses/2342361-gerez-votre-code-avec-git-et-github" target="_blank">Gérer votre code avec git et github</a></li>
+                        <li><span class="date">20/05/2020</span> : <a title="Lien du cours" href="https://openclassrooms.com/fr/courses/4262331-demarrez-votre-projet-avec-python" target="_blank">Démarrez votre projet avec Python</a></li>
+                        <li><span class="date">25/06/2019</span> : <a title="Lien du cours" href="https://openclassrooms.com/fr/courses/1946386-comprendre-le-web" target="_blank">Comprendre le Web</a></li>
+
+                        </ul>
+                    </li>
+                  </ul>
+
+              </div>
+                <!-- Début Langues -->
+                <div class="matter">
+                <h3>Langues</h3>
+
+                  <ul class="sublist">
+                    <li>Anglais niveau <em>C1</em></li>
+                    <li>Espagnol niveau <em>B2</em> (Certifié B1 par l'institut Cervantes en 2018)</li>
+                    <li>Excellent niveau de français</li>
+                  </ul>
+              </div>
+                <!-- Début Autres -->
+                <div class="matter">
+                <h3>Autres</h3>
+
+                  <ul class="sublist">
+                    <li>Cours à la faculté
+                      <ul class="subsublist">
+                        <li>Introduction à l'économie</li>
+                        <li>Mécanique, Phys101</li>
+                        <li>Optique, Phys102</li>
+                        <li>Méthodologie</li>
+                        <li>SPOC Enjeux de la transition écologique</li>
+                        <li>Atelier "Œnologie"</li>
+                        <li>Atelier "Écrire pour être lu"</li>
+                        <li>EUGLOH : Future of Work</li>
+                      </ul>
+                    </li>
+                    <li>Cours en ligne
+                      <ul class="subsublist">
+                        <li><span class="date">06/06/2020</span> : <a title="Lien du cours" href="https://openclassrooms.com/fr/courses/4312781-apprenez-a-apprendre" target="_blank">Apprenez à apprendre</a></li>
+                      </ul>
+                    </li>
+                    <li>Utilitaire
+                      <ul class="subsublist">
+                        <li>Permis B</li>
+                        <li>Formation Extincteur</li>
+                      </ul>
+                    </li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+
+          <div id="content">
+            <br/>
+            <br/>
+          <h2>Mes loisirs</h2>
+          <div id="conteneur">
+
+            <div class="hobby">
+              <h3>TAPIS : 2019 - Aujourd'hui</h3>
+              <p>Je suis Vice-Président de l'association étudiante <a href="https://assotapis.wixsite.com/asso-tapis">TAPIS</a><br />
+                <br />
+                Une association qui propose jeux de carte et convivialité, il n'en fallait pas moins pour me séduire.<br />
+                Par hasard, je vois passer un message annoncant une assemblée générale, et par curiosité je m'y rend n'étant même pas encore membre de l'association, bien que j'y sois déjà allé<br />
+                Dans la foulée, je cottise et je fais alors officiellement partie de l'équipe.<br />
+                <br />
+                Une semaine plus tard, on m'accorde le droit de gestion du local.<br />
+                Je rejoins son conseil d'administration et participe à l'organisation de différents événements en collaboration avec d'autres étudiants engagés.<br />
+                De l'idée de l'événement à sa réalisation concrète, les étapes se multiplient. Passant par la demande de financement, la gestion de la sécurité, à la communication pour mettre au parfum des personnes potentiellement interessées, cela demande un travail de préparation de longue haleine..<br />
+                Mais on y tire à chaque fois une certaine satisfaction lorsque l'on voit ses efforts récompensés !
+              </p>
+
+            </div>
+            <div class="hobby">
+              <h3>PoudlardRP : 2016 - Aujourd'hui</h3>
+              <p>Véritable passionné d'Harry Potter, je participe activement au projet <a href="https://twitter.com/PoudlardRP">PoudlardRP</a> depuis maintenant plusieurs années<br />
+                 (Game Designer, Modérateur, Formateur)<br />
+                <br />
+                PoudlardRP qu'est-ce que c'est ?<br />
+                <ul>
+                  <li>Un serveur MMORPG <a href="https://www.minecraft.net/fr-fr/">Minecraft</a> comptabilisant plus de 250 000 joueurs uniques</li>
+                  <li>Une communauté Discord active de plus de 13000 membres</li>
+                  <li>Une visibilité qui passe par des influenceurs suivis par plusieurs millions de personnes</li>
+                  <li>Une équipe de passionnés qui donnent de leur temps pour développer le projet</li>
+                </ul>
+                Et <em>moi</em> dans tout ça ?<br >
+                Etant l'un des plus anciens membres du projet encore investi, j'ai eu l'occasion de manipuler différents domaines :
+                <ul>
+                  <li>A l'origine recruté pour la modération et le support, on se doit de réagir vite aux problèmes que peuvent rencontrer les joueurs, tout en gardant en tête que l'on représente l'image du projet tout entier, ce qui implique un certain sang-froid et un certain sérieux.</li>
+                  <li>Développant mon champ de compétences, je participe à la scénarisation de l'histoire au travers du travail de correcteur et d'auteur de quêtes, en collaboration avec des personnes géniales.</li>
+                  <li>Je participe également au GameDesign du serveur, cela passe par la réalisation de cahiers des charges que l'on transmet aux développeurs experimentés après avoir partagé nos idées.</li>
+                  <li>De par mon expérience, je forme également les nouveaux venus aux différents mécanismes internes au projet (Slack, Trello, Google Docs, Discord, Mantisbt, ...)</li>
+                </ul>
+                Et bien sûr, des nuits blanches à la recherche du moindre bug, d'essayer de les reproduire et d'en comprendre l'origine potentielle...
+              </p>
+            </div>
+
+              <div class="hobby">
+                <h3>La Gazette de Paris-Saclay : 2021 - Aujourd'hui</h3>
+                <p>Je participe au lancement de la Gazette de Paris-Saclay<br />
+                  <br />
+                  La Gazette de Paris-Saclay est un journal étudiant, par les étudiants et pour les étudiants. <br />
+                  Le projet est encore en cours de lancement, je participe à l'élaboration de la mise en page, des graphismes et des axes journalistiques.<br />
+
+                </p>
+            </div>
+
+            <div class="hobby">
+              <h3>Autre vie associative</h3>
+              <p>Je suis membre des Associations APOIL et Royaume des Avatars, basées à Paris-Saclay<br />
+                <br />
+               Sans véritable engagement profond, je participe à certaines réunions et certains projets.
+               </p>
+          </div>
+
+
+          </div>
+        </div>
+      <footer>
+        <nav>
+          <ul class="contacts">
+            <li><a id="mail" href="mailto:colin.blake@u-psud.fr">Mail</a></li>
+            <li><a id="phone" href="tel:+33648081339">0648081339</a></li>
+          </ul>
+        </nav>
+      </footer>
+      </div>
+    </body>
+</html>

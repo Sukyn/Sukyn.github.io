@@ -1,0 +1,49 @@
+
+        "plot" : "The story of a long-lost book that mysteriously reappears and connects an old man searching for his son with a girl seeking a cure for her mother's loneliness."
+}
+{
+        "plot" : "M.O.T.D looks into how much influence the Devil has over us. Does he exist or is he a figment of our imagination? Has the Devil hidden his reality to keep us questioning his existence thus ..."
+}
+{
+        "plot" : "A preacher heads out on a journey to combat the supernatural evil that just decimated his Texas hometown."
+}
+{
+        "plot" : "When a mission goes bad and \"Red King Force\" Captain Steve Colossus is forced to leave his team inside a computerized world created for a dangerous Robotic life-form, Colossus must go back ..."
+}
+{
+        "plot" : "FLEA is the story of a young boy, who runs away from an abusive home to join a tribe of forest dwellers known as the Shadow Clan. \"Flea\" inhabits Shade Land, under the guidance of \"Raven\" (..."
+}
+{
+        "plot" : "A prominent criminal attorney is killed during a trial, by his own client, leaving behind his wife and 13 year old son. His law firm business partner and childhood best friend gets charged ..."
+}
+{
+        "plot" : "A father's wish for a cure becomes his family's worst nightmare as they find themselves battling the forces of a darker world."
+}
+{
+        "plot" : "A married couple suffers a terrible car accident that sends the woman in a coma, where she's transported into another place and falls for another man."
+}
+{
+        "plot" : "In the 15th Century, Kate Thorne, a wild girl with supernatural powers, accepts her destiny as a witch and confronts those who seek to destroy her."
+}
+{
+        "plot" : "Adam had everything: the looks of a movie star, the mind of a genius, a seven-figure salary, a brilliant career - everything but a woman worthy of his love. Having lost hope, he resorts to ..."
+}
+{
+        "plot" : "An orphan boy is raised in the jungle with the help of a pack of wolves, a bear, and a black panther."
+}
+{
+        "plot" : "A boy seeks the help of a tree monster to cope with his single mom's terminal illness."
+}
+{
+        "plot" : "An old magical book in one world exerts a mysterious effect on another."
+}
+{ }
+{
+        "plot" : "An orphaned young girl with unworldly powers is taken in by a man and woman who claim to be her parents."
+}
+{
+        "plot" : "Molly'S journey through group therapy and counselling sessions as she battles to conquer her demons and live a fulfilled life."
+}
+{ }
+{
+        "plot" : "Six Feet from the Edge is a story that magnifies relationships and how they are connected through fate and coincidence. An ensemble of conflicting characters all connected by young Award-Winning Author, Jonathan Koplan."
