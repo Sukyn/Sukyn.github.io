@@ -1,49 +1,243 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
     <head>
-        <!-- En-tête de la page -->
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="style.css" />
-        <title>Page personnelle</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Resume of Colin Blake, PhD candidate in quantum computing at Inria." />
+        <meta name="author" content="Colin Blake" />
+        <title>Resume - Colin Blake</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Courier Prime font -->
+        <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            .navbar {
+                position: relative;
+                background-color: rgba(255, 69, 0, 0.5); /* Semi-transparent background */
+            }
+            .navbar::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-image: url('assets/img/halloween.jpg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                opacity: 0.3; /* Adjust the opacity as needed */
+                z-index: -1; /* Ensure the image is behind the content */
+            }
+            .navbar-nav {
+                background-color: rgba(0, 0, 0, 0.3); /* Opaque background for the text */
+            }
+            .company-logo {
+                display: flex;
+                align-items: center;
+            }
+            .company-logo img {
+                max-width: 50px;
+                margin-right: 10px;
+            }
+            .company-logo .logo-text {
+                margin-right: 10px; /* Add space between text and logo */
+            }
+            .resume-section {
+                padding: 50px 0;
+            }
+            .resume-section-content {
+                max-width: 800px;
+                margin: 0 auto;
+            }
+            /* Apply Courier Prime font to specific elements */
+            .navbar-brand .d-block.d-lg-none,
+            .navbar-brand .d-none.d-lg-block {
+                font-family: 'Rubik Wet Paint', monospace;
+                font-size: 3em; /* Adjust the font size as needed */
+            }
+            .resume-section h1 {
+                font-family: 'Rubik Wet Paint', monospace;
+                font-size: 3em; /* Adjust the font size as needed */
+            }
+        </style>
     </head>
-    <body>
-        <!-- Corps de la page -->
-        <div id="page">
-        <header>
-        <a href="index.html"><h1>Colin Blake</h1></a>
-        <nav>
-          <ul class="menu" id="menu">
-            <li><a href="experience.html">Mon expérience</a></li>
-            <li><a href="competences.html">Mes compétences</a></li>
-            <li><a href="formation.html">Ma formation</a></li>
-            <li><a href="loisirs.html">Mes loisirs</a></li>
-          </ul>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Colin Blake</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="Profile Picture of Colin Blake" loading="lazy" /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#papers">Papers</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#events">Events</a></li>
+                </ul>
+            </div>
         </nav>
-
-        </header>
-        <div id="content">
-        <h2>Bienvenue sur mon site</h2>
-        <figure id="avatar"><img src="Images/avatar.jpeg" alt="Photo de Profil" /></figure>
-        <div id="conteneur">
-          <div class="matter">
-          <h3 id="pres">Bienvenue sur la page de présentation de mon site web</h3>
-          <p>
-            En guise d'entraînement, je réalise ce dernier pour me présenter.<br />
-            <br />
-            Je m'appelle Colin, j'ai actuellement 20 ans et je suis en 3ème année de Licence Double Diplôme <em>Mathématiques</em> & <em>Informatique</em> en Magistère d'Informatique à l'université Paris Saclay<br />
-            Pour continuer votre visite, un menu se trouve en haut de votre écran, bon voyage !
-          </p>
-          </div>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- About-->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        Colin
+                        <span class="text-primary">Blake</span>
+                    </h1>
+                    <div class="subheading mb-5">
+                        Nancy, France ·
+                        <a href="mailto:colin.blake[at]inria.fr">colin.blake[at]inria.fr</a>
+                    </div>
+                    <p class="lead mb-5">I am a PhD candidate in quantum computing at Inria, specializing in the development of equational theories for quantum circuits, particularly qudit systems. My research focuses on the formalization and optimization of quantum circuits, with the goal of proving the completeness of equational theories and improving quantum algorithms. I have a strong background in theoretical computer science and have completed several internships in the field, contributing to the advancement of quantum computing research.</p>
+                    <div class="social-icons">
+                        <a class="social-icon" href="https://www.linkedin.com/in/colin-blake/"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Experience-->
+            <section class="resume-section" id="experience">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Experience</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">PhD Candidate - MOCQUA Team</h3>
+                            <div class="company-logo mb-3">
+                                <div class="logo-text">Inria</div>
+                                <img src="assets/img/logo-inria.jpg" alt="Inria Logo" loading="lazy">
+                            </div>
+                            <p>PhD candidate in quantum computing, specializing in the development of equational theories for quantum circuits, particularly qudit systems. Working on the formalization and optimization of quantum circuits, with the goal of proving the completeness of equational theories and improving quantum algorithms.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Oct. 2024 - Present</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Intern - MOCQUA Team</h3>
+                            <div class="company-logo mb-3">
+                                <div class="logo-text">Inria</div>
+                                <img src="assets/img/logo-inria.jpg" alt="Inria Logo" loading="lazy">
+                            </div>
+                            <p>M2 level internship focused on the completeness of equational theories of quantum circuits applied to qudits.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Mar. 2024 - Jul. 2024</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Intern - QuaCS Team</h3>
+                            <div class="company-logo mb-3">
+                                <div class="logo-text">Inria</div>
+                                <img src="assets/img/logo-inria.jpg" alt="Inria Logo" loading="lazy">
+                            </div>
+                            <p>M1 level internship to demonstrate the completeness of fragments of a graphical language (ZX-Calculus) enriched with a partial transpose operator.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Mar. 2023 - Jul. 2023</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Intern - QuaCS Team</h3>
+                            <div class="company-logo mb-3">
+                                <div class="logo-text">LMF - Laboratoire Méthodes Formelles</div>
+                            </div>
+                            <p>L3 level internship involved in the compilation of quantum circuits in a typed language, as well as the representation of Pattern-Matching in ZX-Calculus.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">May 2022 - Jul. 2022</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Education-->
+            <section class="resume-section" id="education">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Education</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">M2 MPRI - Master Parisien de Recherche en Informatique</h3>
+                            <div class="subheading mb-3">ENS Paris-Saclay</div>
+                            <p>Mention Bien</p>
+                            <p>Research-oriented training in computer science, collaborating with major French institutions.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Sept. 2023 - Aug. 2024</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Magistère d'Informatique</h3>
+                            <div class="subheading mb-3">Université Paris-Saclay</div>
+                            <p>Excellence program integrating Bachelor's and Master's degrees in computer science.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Sept. 2021 - Aug. 2024</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">M1 MPRI - Master in Theoretical Computer Science</h3>
+                            <div class="subheading mb-3">Université Paris-Saclay</div>
+                            <p>Grade: 16/20, Laureate of the Labex DigiCosme Excellence Scholarship.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Sept. 2022 - Aug. 2023</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Licence Double Diplôme Mathématiques et Informatique</h3>
+                            <div class="subheading mb-3">Université Paris-Saclay</div>
+                            <p>Mention Très Bien, 16+/20 each year. Engaged in associative activities, including president of a card games association.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">2019 - 2022</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Baccalauréat Scientifique</h3>
+                            <div class="subheading mb-3">Lycée Blaise Pascal, Orsay</div>
+                            <p>Mention Très Bien (17,55/20)</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">2016 - 2019</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Papers-->
+            <section class="resume-section" id="papers">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Papers</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Not any paper yet :(</h3>
+                            <div class="subheading mb-3">Still cooking...</div>
+                            <p>Currently working on axiomatization of qutrit circuits</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">October 2024</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Events-->
+            <section class="resume-section" id="events">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Events</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Starting my PhD!</h3>
+                            <div class="subheading mb-3">Inria, Nancy</div>
+                            <p>I am excited to announce that I will be starting my PhD in quantum computing at Inria, Nancy.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Oct. 2024</span></div>
+                    </div>
+                </div>
+            </section>
         </div>
-      </div>
-      <footer>
-        <nav>
-          <ul class="contacts">
-            <li><a id="mail" href="mailto:colin.blake@u-psud.fr">Mail</a></li>
-            <li><a id="phone" href="tel:+33648081339">0648081339</a></li>
-          </ul>
-        </nav>
-      </footer>
-      </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
     </body>
 </html>
