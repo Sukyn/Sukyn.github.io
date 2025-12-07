@@ -1,0 +1,54 @@
+[
+  {
+    "id": "seed-1",
+    "title": "Starting my PhD!",
+    "date": "2024-10-01",
+    "summary": "I am excited to announce that I started my PhD in quantum computing at Inria Nancy.",
+    "content": "",
+    "tags": [
+      "phd",
+      "inria"
+    ],
+    "pdfUrl": ""
+  },
+  {
+    "id": "1765124944624",
+    "title": "I will attend the \"Journées Informatique Quantique 2025\"",
+    "date": "2025-01-28",
+    "summary": "While I won't be giving a presentation this time, I'd love to connect and discuss exciting topics in quantum computing!\n<a href=\"https://jiq-epiq-2025.sciencesconf.org/\" target=\"_blank\">Visit the event website</a>",
+    "content": "",
+    "tags": [
+      "jiq",
+      "saclay",
+      "phd"
+    ],
+    "pdfUrl": ""
+  },
+  {
+    "id": "1765124994857",
+    "title": "Scientific Game Jam: Les Chevaliers du Quantique",
+    "date": "2025-03-01",
+    "summary": " Co-created a digital and pen & paper game for a scientific game jam focused on quantum circuits. Our team won the Jury Prize for innovation and educational value. <a href=\"https://sukyn.itch.io/les-chevaliers-du-quantique\" target=\"_blank\">View the project</a> and <a href=\"assets/circuits_game.pdf\" target=\"_blank\">download the PDF version</a>.\n                 ",
+    "content": "",
+    "tags": [
+      "mediation",
+      "nancy",
+      "game",
+      "phd"
+    ],
+    "pdfUrl": ""
+  },
+  {
+    "id": "1765125066534",
+    "title": "Presentation at PhD Day - Department of Formal Methods, Loria",
+    "date": "2025-12-07",
+    "summary": "Presented ongoing work \"Escape the Matrix: Graphical Reasoning and Minimal Axioms for Quantum Circuits\" at the 2025 PhD Day of the Formal Methods department. Slides available <a href=\"assets/phd_day_presentation_minimality.pdf\" target=\"_blank\">here</a>.\n                           ",
+    "content": "",
+    "tags": [
+      "talk",
+      "nancy",
+      "phd"
+    ],
+    "pdfUrl": ""
+  }
+]
