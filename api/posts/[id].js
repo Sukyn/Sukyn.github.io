@@ -1,5 +1,7 @@
 // /api/posts/[id].js
-import { kv } from '@vercel/kv';
+import { Redis } from '@upstash/redis';
+
+const redis = Redis.fromEnv();
 
 function getAuthToken(req) {
   const h = req.headers['authorization'] || '';
@@ -15,7 +17,6 @@ async function readJson(req) {
 }
 
 function getIdFromReq(req) {
-  // Vercel should populate req.query.id, but this is a safe fallback
   const fromQuery = req.query?.id;
   if (fromQuery) return String(fromQuery);
   const url = new URL(req.url, 'http://localhost');
@@ -23,12 +24,23 @@ function getIdFromReq(req) {
   return parts[parts.length - 1];
 }
 
+async function loadPosts() {
+  const stored = await redis.get('posts');
+  if (!stored) return [];
+  if (Array.isArray(stored)) return stored;
+  try { return JSON.parse(stored); } catch { return []; }
+}
+
+async function savePosts(posts) {
+  await redis.set('posts', JSON.stringify(posts));
+}
+
 export default async function handler(req, res) {
   const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || '';
   const id = getIdFromReq(req);
 
   if (req.method === 'GET') {
-    const posts = (await kv.get('posts')) || [];
+    const posts = await loadPosts();
     const post = posts.find(p => String(p.id) === String(id));
     if (!post) return res.status(404).json({ error: 'Not found' });
     res.setHeader('Cache-Control', 'no-store');
@@ -39,8 +51,9 @@ export default async function handler(req, res) {
     if (getAuthToken(req) !== ADMIN_PASSWORD) {
       return res.status(401).json({ error: 'Unauthorized' });
     }
+
     const payload = await readJson(req);
-    const posts = (await kv.get('posts')) || [];
+    const posts = await loadPosts();
     const i = posts.findIndex(p => String(p.id) === String(id));
     if (i === -1) return res.status(404).json({ error: 'Not found' });
 
@@ -64,7 +77,7 @@ export default async function handler(req, res) {
       tags: normalisedTags
     };
 
-    await kv.set('posts', posts);
+    await savePosts(posts);
     return res.status(200).json(posts[i]);
   }
 
@@ -72,11 +85,13 @@ export default async function handler(req, res) {
     if (getAuthToken(req) !== ADMIN_PASSWORD) {
       return res.status(401).json({ error: 'Unauthorized' });
     }
-    const posts = (await kv.get('posts')) || [];
+
+    const posts = await loadPosts();
     const i = posts.findIndex(p => String(p.id) === String(id));
     if (i === -1) return res.status(404).json({ error: 'Not found' });
+
     const removed = posts.splice(i, 1)[0];
-    await kv.set('posts', posts);
+    await savePosts(posts);
     return res.status(200).json({ success: true, removed });
   }
 

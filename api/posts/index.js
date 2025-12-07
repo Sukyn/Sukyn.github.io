@@ -1,5 +1,7 @@
 // /api/posts/index.js
-import { kv } from '@vercel/kv';
+import { Redis } from '@upstash/redis';
+
+const redis = Redis.fromEnv(); // uses UPSTASH_REDIS_REST_URL / TOKEN
 
 function getAuthToken(req) {
   const h = req.headers['authorization'] || '';
@@ -14,11 +16,27 @@ async function readJson(req) {
   try { return raw ? JSON.parse(raw) : {}; } catch { return {}; }
 }
 
+async function loadPosts() {
+  const stored = await redis.get('posts');
+  if (!stored) return [];
+  if (Array.isArray(stored)) return stored;    // Upstash can return parsed JSON
+  try {
+    return JSON.parse(stored);
+  } catch {
+    return [];
+  }
+}
+
+async function savePosts(posts) {
+  // store as JSON string
+  await redis.set('posts', JSON.stringify(posts));
+}
+
 export default async function handler(req, res) {
   const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || '';
 
   if (req.method === 'GET') {
-    const posts = (await kv.get('posts')) || [];
+    const posts = await loadPosts();
     posts.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
     res.setHeader('Cache-Control', 'no-store');
     return res.status(200).json(posts);
@@ -30,7 +48,9 @@ export default async function handler(req, res) {
     }
 
     const { title, date, summary, content, tags, pdfUrl } = await readJson(req);
-    if (!title || !date) return res.status(400).json({ error: 'title and date are required' });
+    if (!title || !date) {
+      return res.status(400).json({ error: 'title and date are required' });
+    }
 
     const normalisedTags = Array.isArray(tags)
       ? tags
@@ -38,7 +58,7 @@ export default async function handler(req, res) {
           ? tags.split(',').map(t => t.trim()).filter(Boolean)
           : []);
 
-    const posts = (await kv.get('posts')) || [];
+    const posts = await loadPosts();
     const post = {
       id: Date.now().toString(),
       title,
@@ -48,8 +68,10 @@ export default async function handler(req, res) {
       tags: normalisedTags,
       pdfUrl: pdfUrl || ''
     };
+
     posts.push(post);
-    await kv.set('posts', posts);
+    await savePosts(posts);
+
     return res.status(201).json(post);
   }
 

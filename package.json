@@ -9,7 +9,7 @@
     "build": "echo \"Static site – nothing to build\""
   },
   "dependencies": {
-    "@vercel/kv": "^1.0.0"
+    "@upstash/redis": "^1.30.0"
   },
   "devDependencies": {
     "vercel": "^39.0.0"
