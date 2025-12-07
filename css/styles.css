@@ -10970,3 +10970,35 @@ section.resume-section .resume-section-content {
     padding-bottom: 5rem;
   }
 }
+
+.blog-posts {
+  margin-top: 1rem;
+}
+
+.blog-post-card {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  background-color: #fff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03);
+}
+
+.blog-post-title {
+  margin-bottom: 0.25rem;
+}
+
+.blog-post-meta {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-bottom: 0.75rem;
+}
+
+.blog-post-summary {
+  margin-bottom: 0.75rem;
+}
+
+.blog-post-readmore {
+  font-weight: 600;
+}
+
